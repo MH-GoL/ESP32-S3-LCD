@@ -3,156 +3,156 @@ LCD_delay(20);
 LCD_SPI_CS(0);
 LCD_Reset();
 
-SPI_WriteComm(0xc0);  
-SPI_WriteData(0x01);
-SPI_WriteData(0x11);
+SPI_WriteComm(0xc0); //Internal Oscillator Setting
+SPI_WriteData(0x01); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x11); //0x11 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0x20);  
+SPI_WriteComm(0x20);
 
-SPI_WriteComm(0x36);  
+SPI_WriteComm(0x36);
 SPI_WriteData(0x0A);
 
-SPI_WriteComm(0x3a);  
-SPI_WriteData(0x77); //16/18/24bit
+SPI_WriteComm(0x3a); //Interface Pixel Format
+SPI_WriteData(0x77); //0x70 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0x35);  
+SPI_WriteComm(0x35);
 SPI_WriteData(0x00);
   
-SPI_WriteComm(0xb1);  
-SPI_WriteData(0x06);
-SPI_WriteData(0x03);
-SPI_WriteData(0x00);
+SPI_WriteComm(0xb1); //RGB Interface Setting
+SPI_WriteData(0x06); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x08 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x00); //0x08 in Datasheet of LB043WV2-SD01
 
-SPI_WriteComm(0xb2);            
-SPI_WriteData(0x00);
-SPI_WriteData(0xc8);
+SPI_WriteComm(0xb2); //Panel Characteristics Setting
+SPI_WriteData(0x00); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0xc8); //0xC8 in Datasheet of LB043WV2-SD01
 
-SPI_WriteComm(0xb3);            
-SPI_WriteData(0x01);
+SPI_WriteComm(0xb3); //Panel Drive Setting
+SPI_WriteData(0x01); //0x00 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xb4);            
-SPI_WriteData(0x04);
+SPI_WriteComm(0xb4); //Display Mode Control
+SPI_WriteData(0x04); //0x04 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xb5);            
-SPI_WriteData(0x10);
-SPI_WriteData(0x30);
-SPI_WriteData(0x30);
-SPI_WriteData(0x00);
-SPI_WriteData(0x00);
+SPI_WriteComm(0xb5); //Display Control 1
+SPI_WriteData(0x10); //0x42 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x30); //0x10 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x30); //0x10 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x00); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x00); //0x20 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xb6);  //
-SPI_WriteData(0x0b);  //0b
-SPI_WriteData(0x0f);
-SPI_WriteData(0x3c);
-SPI_WriteData(0x13);
-SPI_WriteData(0x13);
-SPI_WriteData(0xe8);
+SPI_WriteComm(0xb6); //Display Control 2
+SPI_WriteData(0x0b); //0x0B in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x0f); //0x0F in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x3c); //0x3C in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x13); //0x13 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x13); //0x13 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0xe8); //0xE8 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xb7);  
-SPI_WriteData(0x46);
-SPI_WriteData(0x06);
-SPI_WriteData(0x0c);
-SPI_WriteData(0x00);
-SPI_WriteData(0x00);
+SPI_WriteComm(0xb7); //Display Control 3
+SPI_WriteData(0x46); //0x46 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x06); //0x06 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x0c); //0x0C in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x00); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x00); //0x00 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xc0); //Internal Oscillator Setting 
-SPI_WriteData(0x01);
-SPI_WriteData(0x15);
+SPI_WriteComm(0xc0); //Internal Oscillator Setting
+SPI_WriteData(0x01); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x11 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xc3); //Power Control 3 
-SPI_WriteData(0x07);
-SPI_WriteData(0x03);
-SPI_WriteData(0x04);
-SPI_WriteData(0x04);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xc3); //Power Control 3
+SPI_WriteData(0x07); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x04 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x04 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x04 in Datasheet of LB043WV2-SD01
 LCD_delay(40);
 
-SPI_WriteComm(0xc4); //Power Control 4 
-SPI_WriteData(0x12); //11
-SPI_WriteData(0x24); //23
-SPI_WriteData(0x12); //12   16 
-SPI_WriteData(0x12); //12   16
-SPI_WriteData(0x02); //05   
-SPI_WriteData(0x6b); //6d  49   //6A
+SPI_WriteComm(0xc4); //Power Control 4
+SPI_WriteData(0x12); //0x12 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x24); //0x24 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x12); //0x18 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x12); //0x18 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x02); //0x02 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x6b); //0x49 in Datasheet of LB043WV2-SD01
 LCD_delay(20);
 
-SPI_WriteComm(0xc5); //Power Control 5 
-SPI_WriteData(0x69); //69
+SPI_WriteComm(0xc5); //Power Control 5
+SPI_WriteData(0x69); //0x6F in Datasheet of LB043WV2-SD01
 LCD_delay(10);
 
-SPI_WriteComm(0xc6); //Power Control 6  
-SPI_WriteData(0x41); //41 40
-SPI_WriteData(0x63);
+SPI_WriteComm(0xc6); //Power Control 6
+SPI_WriteData(0x41); //0x41 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x63); //0x63 in Datasheet of LB043WV2-SD01
 LCD_delay(10);
 
-SPI_WriteComm(0xd0); //Positive Gamma Curve for Red 
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xd0); //Set Positive Gamma Curve for Red
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
 
-SPI_WriteComm(0xd1); //Negative Gamma Curve for Red 
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xd1); //Set Negative Gamma Curve for Red
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
 
-SPI_WriteComm(0xd2); //Positive Gamma Curve for Green 
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xd2); //Set Positive Gamma Curve for Green
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xd3); //Negative Gamma Curve for Green 
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xd3); //Set Negative Gamma Curve for Green
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
  
-SPI_WriteComm(0xd4); //Positive Gamma Curve for Blue  
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
+SPI_WriteComm(0xd4); //Set Positive Gamma Curve for Blue
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
 
-SPI_WriteComm(0xd5); //Negative Gamma Curve for Blue  
-SPI_WriteData(0x01);
-SPI_WriteData(0x26);
-SPI_WriteData(0x71);
-SPI_WriteData(0x16);
-SPI_WriteData(0x04);
-SPI_WriteData(0x03);
-SPI_WriteData(0x51);
-SPI_WriteData(0x15);
-SPI_WriteData(0x04);
- 
+SPI_WriteComm(0xd5); //Set Negative Gamma Curve for Blue
+SPI_WriteData(0x01); //0x03 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x26); //0x07 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x71); //0x73 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x16); //0x35 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x03); //0x01 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x51); //0x20 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x15); //0x00 in Datasheet of LB043WV2-SD01
+SPI_WriteData(0x04); //0x03 in Datasheet of LB043WV2-SD01
+
 SPI_WriteComm(0x11); //Sleep Out 
-LCD_delay(20);
+LCD_delay(20);	     //100ms in Datasheet of LB043WV2-SD01
 
 SPI_WriteComm(0x29); //Display On	
 LCD_delay(10);
